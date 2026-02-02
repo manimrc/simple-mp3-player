@@ -220,6 +220,6 @@ app.use((err, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`🎵 Simple MP3 Player Backend running on http://localhost:${PORT}`)
+    console.log(`🎵 ikTarfa Music Backend running on http://localhost:${PORT}`)
     console.log(`📁 Bucket: ${B2_BUCKET_NAME}`)
 })

@@ -8,9 +8,9 @@ export const MainLayout = ({ children, headerRight, playerBar }) => {
             <header className="h-16 border-b border-white/5 px-6 flex items-center justify-between glass z-50">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
-                        <span className="text-black font-black text-xl">A</span>
+                        <span className="text-black font-black text-xl">I</span>
                     </div>
-                    <span className="font-black text-xl tracking-tight hidden sm:block">Antigravity Music</span>
+                    <span className="font-black text-xl tracking-tight hidden sm:block">ikTarfa</span>
                 </div>
 
                 <div className="flex items-center gap-4">

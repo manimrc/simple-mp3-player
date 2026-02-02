@@ -71,11 +71,11 @@ function App() {
   // Update document title with current song
   useEffect(() => {
     if (currentSong && isPlaying) {
-      document.title = `▶ ${currentSong.name} - Antigravity Music`;
+      document.title = `▶ ${currentSong.name} - ikTarfa Music`;
     } else if (currentSong) {
-      document.title = `${currentSong.name} - Antigravity Music`;
+      document.title = `${currentSong.name} - ikTarfa Music`;
     } else {
-      document.title = 'Antigravity Music';
+      document.title = 'ikTarfa Music';
     }
   }, [currentSong, isPlaying]);
 

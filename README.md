@@ -1,4 +1,4 @@
-# Simple MP3 Player - Personal Cloud Music Library
+# ikTarfa Music - Personal Cloud Music Library
 
 A minimalist personal cloud MP3 player with no database required. Store your music in a private Backblaze B2 bucket and stream it securely through a backend proxy.
 
