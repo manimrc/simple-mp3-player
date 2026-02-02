@@ -17,15 +17,12 @@ A minimalist personal cloud MP3 player with no database required. Store your mus
 ## 📁 Project Structure
 
 ```
-v2-simple-player/
+simple-mp3-player/
 ├── backend/          # Node.js + Express API
 │   ├── server.js     # Main server with 4 endpoints
 │   ├── b2Client.js   # Backblaze B2 wrapper
 │   └── middleware/   # API key authentication
 └── web/              # React web frontend
-    └── src/
-        ├── App.jsx   # Main app component
-        └── services/api.js
 ```
 
 ---
@@ -42,7 +39,7 @@ v2-simple-player/
 
 1. **Navigate to backend:**
    ```bash
-   cd v2-simple-player/backend
+   cd backend
    ```
 
 2. **Install dependencies:**
@@ -76,7 +73,7 @@ v2-simple-player/
 
 1. **Navigate to web:**
    ```bash
-   cd v2-simple-player/web
+   cd web
    ```
 
 2. **Install dependencies:**
