@@ -139,7 +139,9 @@ export const getDownloadUrl = (fileName) => {
     if (!b2DownloadUrl) {
         throw new Error('B2 not authorized. Call authorizeB2() first.')
     }
-    return `${b2DownloadUrl}/file/${B2_BUCKET_NAME}/${encodeURIComponent(fileName)}`
+    // Encode parts but keep slashes for folder structure in B2
+    const encodedPath = fileName.split('/').map(part => encodeURIComponent(part)).join('/')
+    return `${b2DownloadUrl}/file/${B2_BUCKET_NAME}/${encodedPath}`
 }
 
 export { B2_BUCKET_NAME }

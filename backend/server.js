@@ -192,12 +192,22 @@ app.get('/api/stream/:fileName(*)', validateApiKey, async (req, res) => {
         })
 
     } catch (error) {
-        console.error('[Stream] Error:', error.message)
-        if (error.response?.status === 404) {
-            return res.status(404).json({ error: 'File not found in B2' })
+        console.error(`[Stream] Error streaming ${req.params.fileName}:`, error.message)
+        if (error.response) {
+            console.error(`[Stream] B2 Error Status: ${error.response.status}`)
+            console.error(`[Stream] B2 Error Data:`, error.response.data)
+
+            if (error.response.status === 404) {
+                return res.status(404).json({ error: 'File not found in B2' })
+            }
         }
+
         if (!res.headersSent) {
-            res.status(500).json({ error: error.message })
+            res.status(500).json({
+                error: 'Streaming failed',
+                message: error.message,
+                path: req.params.fileName
+            })
         }
     }
 })
