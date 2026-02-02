@@ -35,6 +35,13 @@ function App() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+
+    // Sync favicon
+    const isLight = theme === 'pastel' || theme === 'tokyo-night';
+    const favicon = document.getElementById('favicon');
+    if (favicon) {
+      favicon.href = isLight ? '/logo-light.png' : '/logo-dark.png';
+    }
   }, [theme]);
 
   // Sync state with audio element
@@ -171,6 +178,7 @@ function App() {
 
   return (
     <MainLayout
+      theme={theme}
       headerRight={
         <ThemeToggle currentTheme={theme} onThemeChange={setTheme} />
       }
