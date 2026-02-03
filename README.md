@@ -1,5 +1,8 @@
 # ikTarfa Music - Personal Cloud Music Library
 
+> [!NOTE]
+> **Project Status**: The Web version is now **stable and frozen** (Tagged: `v1.0-web-final`). Development is shifting to a mobile-first experience using React Native and Expo.
+
 A minimalist personal cloud MP3 player with no database required. Store your music in a private Backblaze B2 bucket and stream it securely through a backend proxy.
 
 ## 🎯 Features
