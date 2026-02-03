@@ -267,7 +267,7 @@ function App() {
       {/* Hidden Audio Element */}
       <audio
         ref={audioRef}
-        src={currentSong ? api.getStreamUrl(currentSong.fileName) : ''}
+        src={currentSong ? api.getStreamUrl(currentSong.fileName) : null}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={handleNext} // Auto-play next song
